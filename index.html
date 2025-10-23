@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <!-- Album Art Section -->
+            <div class="album-art-container">
+                <div class="album-art">
+                    <img id="album-image" src="https://via.placeholder.com/300x300/667eea/ffffff?text=Music+Player" alt="Album Art">
+                </div>
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h2 id="song-title">Select a song</h2>
+                <p id="artist-name">Artist</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span class="time" id="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <span class="time" id="duration">0:00</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" id="prev-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="control-btn play-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="next-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-container">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="70">
+            </div>
+        </div>
+
+        <!-- Playlist Section -->
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <div id="playlist-tracks" class="playlist-tracks">
+                <!-- Playlist items will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
